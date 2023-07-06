@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} {{ goods.name }} {% endblock title %}
+
+{% block content %}
+
+    <h2 class="text-center">Maxsulotni taxrirlash</h2>
+    <form method="post">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-danger ml-2">Taxrirlash</button>
+    </form>
+
+{% endblock content %}

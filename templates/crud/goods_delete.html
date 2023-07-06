@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block title %} {{ goods.name }} {% endblock title %}
+
+{% block content %}
+
+    <h2 class="text-center">Maxsulotni o'chirish</h2>
+    <form method="post">{% csrf_token %}
+    <p>{{ goods.name | truncatewords:4 }}</p>
+    <button type="submit" class="btn btn-danger ml-2">O'chirish</button>
+    </form>
+
+{% endblock content %}
